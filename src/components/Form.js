@@ -2,29 +2,6 @@ import { useEffect, useState } from "react";
 import { User } from "../entites/User";
 
 function Form(props) {
-  // const [newValue, setNewValue] = useState("");
-  // const [form, setForm] = useState([]);
-
-  // // useEffect(() => {
-  // //     setGroceries(state => ({ ...state, groceries: ["Milk", "Coffe"] }));
-  // // }, [groceries]);
-
-  // const handleSubmit = () => {
-  //     // setBoard([...board, post]);
-  //     // setPost("");
-  //     console.log("submit")
-  // }
-
-  // return <div class="border p-4 border-black text-black">
-  //     <form onSubmit={handleSubmit}>
-  //     <label>
-  //       Name:
-  //       <input class="text-black border border-black" type="text" value={newValue} onChange={(e) => handleChange(e.target.value)} />
-  //     </label>
-  //     <input type="submit" value="Submit" />
-  //   </form>
-  // </div>
-
   const [newUser, setNewUser] = useState(new User("", 0, ""));
 
   const handleChangeName = (e) => {
@@ -41,7 +18,6 @@ function Form(props) {
 
   const handleSubmit = (e) => {
     props.submit(newUser);
-    console.log(newUser);
     setNewUser(new User("", 0, ""));
     e.preventDefault();
   };

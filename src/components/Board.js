@@ -9,12 +9,6 @@ function Board(props) {
     new User("John Cena", 30, "cantseeme@gmail.com"),
   ]);
 
-  // // useEffect(() => {
-  // //     setGroceries(state => ({ ...state, groceries: ["Milk", "Coffe"] }));
-  // // }, [groceries]);
-
-  console.log("board", board);
-
   const handleAddUser = (newUser) => {
     setBoard([...board, newUser]);
   };

@@ -7,7 +7,6 @@ function Profile(props) {
     setProfile(props);
   }, [props]);
 
-  console.log(props);
   const removeProfile = (e) => {
     props.remove(profile);
     e.preventDefault();
