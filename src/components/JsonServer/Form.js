@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { User } from "../entites/User";
+import { User } from "../../entites/User";
 
 function Form(props) {
-  const [newUser, setNewUser] = useState(new User("", 0, ""));
+  const [newUser, setNewUser] = useState(new User(undefined, "", 0, ""));
 
   const handleChangeName = (e) => {
     setNewUser({ ...newUser, name: e });
@@ -18,7 +18,7 @@ function Form(props) {
 
   const handleSubmit = (e) => {
     props.submit(newUser);
-    setNewUser(new User("", 0, ""));
+    setNewUser(new User(undefined, "", 0, ""));
     e.preventDefault();
   };
 
