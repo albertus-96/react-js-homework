@@ -37,7 +37,7 @@ function Profile(props) {
 
   return (
     <tr>
-      <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+      <td className="px-5 py-5 border-b border-gray-300 bg-gray-500 text-sm">
         <div className="flex items-center">
           <div className="flex-shrink-0 w-10 h-10">
             <img
@@ -58,12 +58,12 @@ function Profile(props) {
                 />
               </p>
             ) : (
-              <p className="text-gray-900 whitespace-no-wrap">{profile.name}</p>
+              <p className="text-gray-200 whitespace-no-wrap">{profile.name}</p>
             )}
           </div>
         </div>
       </td>
-      <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+      <td className="px-5 py-5 border-b border-gray-300 bg-gray-500 text-sm">
         {isEditing ? (
           <input
             type="number"
@@ -73,10 +73,10 @@ function Profile(props) {
             className="bg-gray-300 max-w-full focus:outline-none text-gray-700"
           />
         ) : (
-          <p className="text-gray-900 whitespace-no-wrap">{profile.age}</p>
+          <p className="text-gray-200 whitespace-no-wrap">{profile.age}</p>
         )}
       </td>
-      <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+      <td className="px-5 py-5 border-b border-gray-300 bg-gray-500 text-sm">
         {isEditing ? (
           <input
             type="text"
@@ -86,18 +86,21 @@ function Profile(props) {
             className="bg-gray-300 max-w-full focus:outline-none text-gray-700"
           />
         ) : (
-          <p className="text-gray-900 whitespace-no-wrap">{profile.email}</p>
+          <p className="text-gray-200 whitespace-no-wrap">{profile.email}</p>
         )}
       </td>
-      <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+      <td className="px-5 py-5 border-b border-gray-300 bg-gray-500 text-sm">
         <span className="relative inline-block px-3 py-1 font-semibold text-gray-800 leading-tight mr-4">
           {isEditing ? (
             <span>
               <span
                 aria-hidden
-                className="absolute inset-0 bg-green-200 opacity-50 rounded-full"
+                className="absolute inset-0 bg-green-500 opacity-70  rounded-full"
               ></span>
-              <span className="relative cursor-pointer" onClick={saveProfile}>
+              <span
+                className="relative cursor-pointer text-gray-200"
+                onClick={saveProfile}
+              >
                 Done
               </span>
             </span>
@@ -105,18 +108,21 @@ function Profile(props) {
             <span>
               <span
                 aria-hidden
-                className="absolute inset-0 bg-blue-200 opacity-50 rounded-full"
+                className="absolute inset-0 bg-blue-500 opacity-70 rounded-full "
               ></span>
-              <span className="relative cursor-pointer" onClick={editProfile}>
+              <span
+                className="relative cursor-pointer text-gray-200 "
+                onClick={editProfile}
+              >
                 Edit
               </span>
             </span>
           )}
         </span>
-        <span className="relative inline-block px-3 py-1 font-semibold text-gray-800 leading-tight">
+        <span className="relative inline-block px-3 py-1 font-semibold text-gray-200 leading-tight">
           <span
             aria-hidden
-            className="absolute inset-0 bg-red-200 opacity-50 rounded-full"
+            className="absolute inset-0 bg-red-500 rounded-full opacity-70"
           ></span>
           <span className="relative cursor-pointer" onClick={removeProfile}>
             Remove

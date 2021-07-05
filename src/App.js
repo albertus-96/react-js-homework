@@ -2,25 +2,12 @@
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 import Board from "./components/State/Board";
 import OnlineBoard from "./components/JsonServer/OnlineBoard";
+import Home from "./components/Home";
 
 function App() {
   return (
     <Router>
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/online">Online Board</Link>
-            </li>
-            <li>
-              <Link to="/offline">Offline Board</Link>
-            </li>
-          </ul>
-        </nav>
-
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
@@ -46,10 +33,6 @@ function App() {
     //   <OnlineBoard />
     // </div>
   );
-}
-
-function Home() {
-  return <h2>Home</h2>;
 }
 
 export default App;

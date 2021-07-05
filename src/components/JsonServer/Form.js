@@ -25,10 +25,10 @@ function Form(props) {
   return (
     <form onSubmit={handleSubmit}>
       <div className="grid grid-cols-1 gap-4 justify-center">
-        <div className="grid grid-cols-3 gap-2 border border-gray-200 p-2 rounded">
+        <div className="grid grid-cols-3 gap-2 border border-gray-600 bg-gray-700 p-2 rounded">
           <div className="flex border rounded bg-gray-300 items-center p-2 ">
             <svg
-              className="fill-current text-gray-800 mr-2 w-5"
+              className="fill-current text-gray-700 mr-2 w-5"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               width="24"
@@ -77,7 +77,7 @@ function Form(props) {
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              className="mr-2 w-5 h-6 w-6"
+              className="mr-2 w-5 h-6"
               stroke="currentColor"
             >
               <path
@@ -98,7 +98,7 @@ function Form(props) {
         </div>
         <div className="flex justify-center">
           <button
-            className="p-2 border w-1/4 rounded-md bg-gray-800 text-white"
+            className="p-2 border w-1/4 rounded-md bg-gray-700 shadow-md text-white"
             value="Submit"
             type="submit"
           >
